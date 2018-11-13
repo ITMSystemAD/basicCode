@@ -3,26 +3,26 @@ CREATE DATABASE sad;
 USE SAD;
 
 CREATE TABLE weather(
-date date primary key,
-temp float,
-rain float,
-snow float,
-max_wind float, 
-avg_wind float,
-humidity float,
-cloud float,
-dust int(10),
-fine_dust(10));
+date DATE PRIMARY KEY,
+temp FLOAT,
+rain FLOAT,
+snow FLOAT,
+max_wind FLOAT, 
+avg_wind FLOAT,
+humidity FLOAT,
+cloud FLOAT,
+dust INT(10),
+fine_dust INT(10));
 
 CREATE TABLE food(
-num int(10) not null auto_increment primary key,
-gu varchar(20) not null,
-res_name varchar(20) not null,
-date date not null,
-category varchar(20) not null);
+num INT(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+gu VARCHAR(20) NOT NULL,
+res_name VARCHAR(20) NOT NULL,
+date DATE NOT NULL,
+category VARCHAR(20) NOT NULL);
 
 SET foreign_key_checks=0;
-ALTER TABLE food ADD foreign key(date) references weather(date);
+ALTER TABLE food ADD FOREIGN KEY(date) REFERENCES weather(date);
 
 
 LOAD DATA LOCAL INFILE "/home/cloudera/weather.csv"
