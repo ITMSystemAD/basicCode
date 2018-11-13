@@ -1,1 +1,14 @@
+//start mysql server
+sudo service mysqld start
 
+//import weather table in hdfs
+sudo sqoop import --table weather \
+--connect jdbc:mysql://localhost/sad \
+--username root --password tjddyd3329
+--warehouse-dir user/cloudera
+
+//import food table in hdfs
+sudo sqoop import --table food \
+--connect jdbc:mysql://localhost/sad \
+--username root --password tjddyd3329
+--warehouse-dir user/cloudera
