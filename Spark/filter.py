@@ -53,9 +53,9 @@ and float(x.split(",")[9]) < float(check_criteria[6][1]))\
 weather_RDD8 = weather_RDD7.filter(lambda x: float(x.split(",")[8]) >= float(check_criteria[7][0])
 and float(x.split(",")[8]) < float(check_criteria[7][1]))
 
-for a in weather_RDD8.take(weather_RDD8.count()):
-	print a
-sleep(5)
+#for a in weather_RDD8.take(weather_RDD8.count()):
+#	print a
+#sleep(5)
 
 date_RDD0 = weather_RDD8.map(lambda x : x.split(",")[0])
 
