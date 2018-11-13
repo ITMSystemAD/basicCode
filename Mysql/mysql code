@@ -1,7 +1,10 @@
+// make DB
 CREATE DATABASE sad;
 
-USE SAD;
+//use sad DB 
+USE sad;
 
+//make weather table
 CREATE TABLE weather(
 date DATE PRIMARY KEY,
 temp FLOAT,
@@ -14,6 +17,8 @@ cloud FLOAT,
 dust INT(10),
 fine_dust INT(10));
 
+
+//make food table
 CREATE TABLE food(
 num INT(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
 gu VARCHAR(20) NOT NULL,
@@ -21,10 +26,11 @@ res_name VARCHAR(20) NOT NULL,
 date DATE NOT NULL,
 category VARCHAR(20) NOT NULL);
 
+//to add foreignkey
 SET foreign_key_checks=0;
 ALTER TABLE food ADD FOREIGN KEY(date) REFERENCES weather(date);
 
-
+//import csv files to tables 
 LOAD DATA LOCAL INFILE "/home/cloudera/weather.csv"
 INTO TABLE sad.weather FEILDS TERMINATED BY ",";
 
