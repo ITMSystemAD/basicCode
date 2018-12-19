@@ -1,0 +1,5 @@
+Tempurature,min,max,Snow,min,max,Rain,min,max,Cloud,min,max,Wind,min,max,Finedust,min,max,Dust,min,max
+cold,-100000,8,yes,1,100000,yes,5,100000,sunny,-100000,6,moderate,-100000,5,finefine,-100000,50,fine,-100000,100
+chill,7,19,no,-100000,1,no,-100000,5,cloudy,6,10000,windy,5,100000,badbad,50,100000,bad,100,100000
+warm,18,24,,,,,,,,,,,,,,,,,,
+hot,23,100000,,,,,,,,,,,,,,,,,,
